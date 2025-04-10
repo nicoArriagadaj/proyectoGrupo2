@@ -2,6 +2,11 @@
 Ing de Software 
 Guia configurar django y git
 
+# clonar el repositorio:
+git clone https://github.com/nicoArriagadaj/proyectoGrupo2.git
+cd proyectoGrupo2
+
+
 ## Crear el entorno virtual
 python -m venv env
 

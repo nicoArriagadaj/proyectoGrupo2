@@ -10,7 +10,7 @@ cd proyectoGrupo2
 ## Crear el entorno virtual
 python -m venv env
 
-## Activar el entorno virtual
+## Activar el entorno virtual (pueden hacerlo desde VSCODE, luego de tener todo listo)
 env\Scripts\activate
 
 ## Instalar las dependencias

@@ -1,18 +1,11 @@
 from django.db import models
+#from categorias.models import Categoria  
 
-# Create your models here.
-
-from django.db import models
-from django.utils import timezone
-from categorias.models import Categoria
-
-class Tarea(models.Model):  # Todolist able name that inherits models.Model
-    titulo = models.CharField(max_length=250)  # un varchar
-    contenido = models.TextField(blank=True)  # un text
-    fecha_creación = models.DateField(default=timezone.now().strftime("%Y-%m-%d"))  # un date
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-
-
+class Tarea(models.Model):
+    Nombre = models.CharField(max_length=100)
+    Username = models.CharField(max_length=150)
+    Contraseña = models.CharField(max_length=128)  
+    Correo = models.EmailField(max_length=254)  
 
     def __str__(self):
-        return self.titulo  # name to be shown when called
+        return self.Nombre

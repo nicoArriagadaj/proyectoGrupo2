@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p>libros view</p>
+    {% if mangas%}
+        {% for mangas in mangas %}
+            <p>{{mangas.titulo}}</p>
+        {% endfor %}
+    {% else %}
+        <p>No hay mangas todavia, espera a que el admin agregue uno :D</p>
+    {% endif %}
+</body>
+</html>

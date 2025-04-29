@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <p>libros view</p>
+    {% if libros%}
+        {% for libro in libros %}
+            <p>{{libro.titulo}}</p>
+        {% endfor %}
+    {% else %}
+        <p>No hay libros todavia, espera a que el admin agregue uno :D</p>
+    {% endif %}
+</body>
+</html>

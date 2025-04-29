@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import crear_tarea
+from todoapp import views
 
 urlpatterns = [
-    path('crear/', crear_tarea, name='crear_tarea'),
+    path('crear/',views.crear_tarea),
 ]

@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table{
+        padding: 40px;
+    }
+    th{
+        padding: 40px;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
 <head>
 </head>
 <body>
-    <p>libros view</p>
+    <p>peliculas view</p>
     {% if peliculas%}
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Autor</th>
+            <th>Estudio</th>
+            <th>Director</th>
+            <th>Editorial</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Imagen</th>
+        </tr>
+        
         {% for pelicula in peliculas %}
-            <p>{{pelicula.titulo}}</p>
+        <tr>
+            <th>{{pelicula.titulo}}</th>
+            <th>{{pelicula.descripcion}}</th>
+            <th>{{pelicula.autor}}</th>
+            <th>{{pelicula.estudio}}</th>
+            <th>{{pelicula.director}}</th>
+            <th>{{pelicula.editorial}}</th>
+            <th>{{pelicula.fecha_lanzamiento}}</th>
+            <th>{{pelicula.imagen}}</th>
+        </tr>
         {% endfor %}
+        
+    </table>    
     {% else %}
-        <p>No hay peliculas todavia, espera a que el admin agregue uno :D</p>
+        <p>No hay peliculas todavia, espera a que el admin agregue una :D</p>
     {% endif %}
 </body>
 </html>

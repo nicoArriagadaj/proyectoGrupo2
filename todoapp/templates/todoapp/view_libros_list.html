@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table{
+        padding: 40px;
+    }
+    th{
+        padding: 40px;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
 <head>
 </head>
 <body>
     <p>libros view</p>
     {% if libros%}
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Imagen</th>
+        </tr>
         {% for libro in libros %}
-            <p>{{libro.titulo}}</p>
+        <tr>
+            <!-- Falta ver que hacer cuando un valor es nulo, osea que se va a mostrar, se puede hacer con jinja o desde la funcion de view -->
+            <th>{{libro.titulo}}</th>
+            <th>{{libro.descripcion}}</th>
+            <th>{{libro.autor}}</th>
+            <th>{{libro.editorial}}</th>
+            <th>{{libro.fecha_lanzamiento}}</th>
+            <th>{{libro.imagen}}</th>
+        </tr>
         {% endfor %}
+        
+    </table>    
     {% else %}
         <p>No hay libros todavia, espera a que el admin agregue uno :D</p>
     {% endif %}

@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table{
+        padding: 40px;
+    }
+    th{
+        padding: 40px;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
 <head>
 </head>
 <body>
-    <p>libros view</p>
+    <p>animes view</p>
     {% if animes%}
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Autor</th>
+            <th>Estudio</th>
+            <th>Director</th>
+            <th>Editorial</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Imagen</th>
+        </tr>
+        
         {% for anime in animes %}
-            <p>{{animes.titulo}}</p>
+        <tr>
+            <!-- Animes tienen autor? o es el que creo el manga en caso de que sea adap. Lo mismo con editorial -->
+            <th>{{anime.titulo}}</th>
+            <th>{{anime.descripcion}}</th>
+            <th>{{anime.autor}}</th>
+            <th>{{anime.estudio}}</th>
+            <th>{{anime.director}}</th>
+            <th>{{anime.editorial}}</th>
+            <th>{{anime.fecha_lanzamiento}}</th>
+            <th>{{anime.imagen}}</th>
+        </tr>
         {% endfor %}
+        
+    </table>    
     {% else %}
         <p>No hay animes todavia, espera a que el admin agregue uno :D</p>
     {% endif %}

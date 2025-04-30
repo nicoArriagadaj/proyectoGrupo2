@@ -1,15 +1,46 @@
 <!DOCTYPE html>
 <html>
+<style>
+    table{
+        padding: 40px;
+    }
+    th{
+        padding: 40px;
+        border-color: black;
+        border-style: solid;
+    }
+</style>
 <head>
 </head>
 <body>
-    <p>libros view</p>
+    <p>mangas view</p>
     {% if mangas%}
-        {% for mangas in mangas %}
-            <p>{{mangas.titulo}}</p>
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Autor</th>
+            <th>Estudio</th>
+            <th>Director</th>
+            <th>Editorial</th>
+            <th>Fecha Lanzamiento</th>
+            <th>Imagen</th>
+        </tr>
+        
+        {% for manga in mangas %}
+        <tr>
+            <th>{{manga.titulo}}</th>
+            <th>{{manga.descripcion}}</th>
+            <th>{{manga.autor}}</th>
+            <th>{{manga.estudio}}</th>
+            <th>{{manga.director}}</th>
+            <th>{{manga.editorial}}</th>
+            <th>{{manga.fecha_lanzamiento}}</th>
+            <th>{{manga.imagen}}</th>
+        </tr>
         {% endfor %}
+        
+    </table>    
     {% else %}
-        <p>No hay mangas todavia, espera a que el admin agregue uno :D</p>
-    {% endif %}
 </body>
 </html>

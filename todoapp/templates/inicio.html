@@ -1,0 +1,6 @@
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Cerrar sesión</button>
+  <h2>Bienvenido {{ user.username }}</h2>
+  <p>Has iniciado sesión correctamente.</p>
+</form>

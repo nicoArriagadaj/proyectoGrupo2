@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="{% static 'todoapp/login.css' %}" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Iniciar Sesión</h2>
+      <form method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" value="Entrar" />
+      </form>
+    </div>
+  </body>
+</html>

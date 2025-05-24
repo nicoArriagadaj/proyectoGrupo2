@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <h1>Usuarios Ingresados</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Username</th>
+            <th>Correo</th>
+        </tr>
+        {% for tarea in tareas %}
+        <tr>
+            <td>{{ tarea.Nombre }}</td>
+            <td>{{ tarea.Username }}</td>
+            <td>{{ tarea.Correo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{% url 'crear_tarea' %}">← Volver al formulario</a>
+</body>
+</html>

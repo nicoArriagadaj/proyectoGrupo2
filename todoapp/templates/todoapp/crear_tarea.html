@@ -10,7 +10,7 @@
         <h1>Bienvenido</h1>
         <h2>Ingrese sus datos o registrese</h2>
 
-        <form action="RellenarDondeVa" method="post">
+        <form action="{% url 'crear_tarea' %}" method="post">
             {% csrf_token %}
 
             <label for="{{ form.Nombre.id_for_label }}">Nombre</label>
@@ -39,8 +39,12 @@
 
             <button type="submit">Guardar</button>
             <br>
-            <button id = RecuperarContreseña>Recuperar Contraseña</button>
-            <button id = registrarse> Registrarse</button>
+<button type="button" id="RecuperarContraseña">Recuperar Contraseña</button>
+<button type="button" id="registrarse">Registrarse</button>
+            <a href="{% url 'lista_usuarios' %}">
+    <button type="button">Aprete para ver los datos ingresados</button>
+</a>
+
             
         </form>
     </div>
